@@ -24,12 +24,12 @@ function displayClock() {
     seconds = (seconds < 10 ? "0" : "") + seconds;
     const final = "Today is " + month1[month] + " " + day1[date-1] + ", " + year + "<br> It is " +  hours + ":" + minutes + ":" + seconds + " " + ending;
     document.getElementById("clock").innerHTML = final;
-    beforetime = now.getDate();
+    beforetime = now.getTime();
 }
 
 function change(){
     const now1 = new Date();
-    aftertime = now1.getDate();
+    aftertime = now1.getTime();
     diff = (aftertime-beforetime)/1000;
     document.getElementById("change2").innerHTML = diff + " seconds have passed since you loaded this page.";
 
